@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:TilesCutter"
         xmlns:Controls="clr-namespace:TilesCutter.Controls" x:Class="TilesCutter.MainWindow"
         mc:Ignorable="d"
-        Title="Tiles Cutter" Height="208.4" Width="525">
+        Title="Tiles Cutter" Height="208.4" Width="525" Icon="Ritual.ico">
     <Grid>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -41,6 +41,7 @@
                 <Button x:Name="btnSelectImage" Content="Select Image" Margin="15,5" Padding="3" FontSize="16" Click="Button_Click"/>
                 <Button x:Name="btnPreview" Content="Show Preview" Margin="15,5" Padding="3" FontSize="16" Click="Button_Click_1"/>
                 <Button x:Name="btnCut" Content="Cut" Margin="15,5" Padding="3" FontSize="16" Click="btnCut_Click"/>
+                <Button x:Name="btnTools" Content="Tools" Margin="15,5" Padding="3" FontSize="16" Click="btnTools_Click" />
             </StackPanel>
         </Grid>
     </Grid>

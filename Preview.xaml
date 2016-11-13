@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TilesCutter"
         mc:Ignorable="d"
-        Title="Preview" WindowStyle="None" KeyDown="Window_KeyDown" ResizeMode="NoResize">
+        Title="Preview" WindowStyle="None" KeyDown="Window_KeyDown" ResizeMode="NoResize" Background="Transparent" AllowsTransparency="True">
     <Grid x:Name="grid">
         <Image x:Name="image" />
     </Grid>

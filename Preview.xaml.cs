@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -63,7 +56,7 @@ namespace TilesCutter
                 line.Y1 = i * sizeY;
                 line.X2 = Width;
                 line.Y2 = i * sizeY;
-                line.StrokeThickness = 1;
+                line.StrokeThickness = 1;                
                 line.Stroke = new SolidColorBrush(Colors.Black);
                 grid.Children.Add(line);
             }
@@ -83,10 +76,16 @@ namespace TilesCutter
 
         public void Save()
         {
+            foreach (UIElement element in grid.Children)
+                if (element is Line)
+                    element.Opacity = 0;
             for (int i = 0; i < columns; i++)
                 for (int j = 0; j < lines; j++)
-                    Tools.SaveCropped(this, sizeX * i, sizeY * j, sizeX, sizeY, 96, string.Format("{0}{1}.png", j, i));
+                    Tools.SaveCropped(this, sizeX * i, sizeY * j, sizeX, sizeY, 96, string.Format("{0}{1}", j, i));
             MessageBox.Show("Tiles saved.");
+            foreach (UIElement element in grid.Children)
+                if (element is Line)
+                    element.Opacity = 1.0;
         }
     }
 }
