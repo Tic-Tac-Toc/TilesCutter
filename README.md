@@ -3,7 +3,7 @@
 Tiles Cutter is a simple software which allow you to cut easily your tiles.
 
 ##Installation
-To use Tiles Cutter download and start the file : https://github.com/Tic-Tac-Toc/TilesCutter/blob/master/TilesCutterSoftware.exe
+To use Tiles Cutter download and start the file : https://github.com/Tic-Tac-Toc/TilesCutter/releases/tag/1.0.0.0
 Cut tiles where stored in executable_folder/tiles/...
 
 ##Features
