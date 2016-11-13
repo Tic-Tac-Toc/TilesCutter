@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="TilesCutter.Controls.Numbox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TilesCutter.Controls"
+             mc:Ignorable="d" Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtNum" x:FieldModifier="private" Grid.Column="0" Text="0" TextChanged="txtNum_TextChanged" VerticalContentAlignment="Center" GotFocus="txtNum_GotFocus" MouseWheel="txtNum_MouseWheel"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="cmdUp" Grid.Row="0" x:FieldModifier="private" Content="˄"  Click="cmdUp_Click" Padding="0" BorderThickness="0" />
+            <Button x:Name="cmdDown" Grid.Row="1" x:FieldModifier="private"   Content="˅" Click="cmdDown_Click" Padding="0" BorderThickness="0" />
+        </Grid>
+    </Grid>
+</UserControl>

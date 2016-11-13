@@ -1,0 +1,47 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:TilesCutter"
+        xmlns:Controls="clr-namespace:TilesCutter.Controls" x:Class="TilesCutter.MainWindow"
+        mc:Ignorable="d"
+        Title="Tiles Cutter" Height="208.4" Width="525">
+    <Grid>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="138*"/>
+                <ColumnDefinition Width="208*"/>
+                <ColumnDefinition Width="173*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="92" Margin="0,34,176.6,34">
+                <RadioButton x:Name="fixedSizeRB" Content="Fixed Size" Grid.Column="0" Margin="10" FontSize="20" IsChecked="True"/>
+                <RadioButton x:Name="cellCountRB" Content="Cell Count" Grid.Column="0" Margin="10" FontSize="20"/>
+            </StackPanel>
+            <Grid Grid.Column="1" Grid.ColumnSpan="2" Margin="3.4,0,172.4,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="XScale :" VerticalAlignment="Bottom" FontSize="20" Margin="0,0,0,5"/>
+                <Controls:Numbox x:Name="xScale" Grid.Row="0" Grid.Column="1" Height="30" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="YScale :" VerticalAlignment="Top" FontSize="20" Margin="0,5,0,0"/>
+                <Controls:Numbox x:Name="yScale" Grid.Row="1" Grid.Column="1" Height="30" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                <TextBlock x:Name="imgTextbox" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="12"/>
+            </Grid>
+            <StackPanel Orientation="Vertical" Grid.Column="2" VerticalAlignment="Center">
+                <Button x:Name="btnSelectImage" Content="Select Image" Margin="15,5" Padding="3" FontSize="16" Click="Button_Click"/>
+                <Button x:Name="btnPreview" Content="Show Preview" Margin="15,5" Padding="3" FontSize="16" Click="Button_Click_1"/>
+                <Button x:Name="btnCut" Content="Cut" Margin="15,5" Padding="3" FontSize="16" Click="btnCut_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
